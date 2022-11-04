@@ -16,7 +16,7 @@ $(document).ready(function () {
     fade: true,
     cssEase: "linear",
   });
-  $(".related_post_slider").slick({
+  $(".slider-list-influencers").slick({
     dots: true,
     arrows: true,
 
@@ -25,8 +25,8 @@ $(document).ready(function () {
     infinite: true,
     speed: 500,
 
-    nextArrow: ".sl_next",
-    prevArrow: ".sl_prev",
+    nextArrow: ".slider-btns__item--next",
+    prevArrow: ".slider-btns__item--prev",
     responsive: [
       {
         breakpoint: 1024,

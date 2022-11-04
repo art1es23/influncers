@@ -11,12 +11,10 @@ get_header(); ?>
 	
 	<?php if ( $wpb_all_query->have_posts() ) : ?>
 		<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
-			<div class="item_wrap">
-				<a href="<?php the_permalink(); ?>">
-					<img src="<?php echo get_field('img_influencer'); ?>" alt="">
-					<?php the_title(); ?>
-				</a>
-			</div>
+			<a class="item_wrap" href="<?php the_permalink(); ?>">
+				<img src="<?php echo get_field('img_influencer'); ?>" alt="">
+				<span><?php the_title(); ?></span>
+			</a>
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
 	<?php endif; ?>

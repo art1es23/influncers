@@ -5,21 +5,21 @@ Template Name: Archives
 get_header(); ?>
 
 <div class="items_wrap">
-<div class="container">
-<?php
-$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
-<?php if ( $wpb_all_query->have_posts() ) : ?>
-    <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
-        <div class="item_wrap">
-        <a href="<?php the_permalink(); ?>">
-            <img src="<?php echo get_field('img_influencer'); ?>" alt="">
-        
-    <?php the_title(); ?></a></div>
-    <?php endwhile; ?>
-    <?php wp_reset_postdata(); ?>
-<?php endif; ?>
+	<div class="items_wrap--wrapper container">
+	<?php
+	$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
+	<?php if ( $wpb_all_query->have_posts() ) : ?>
+		<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+			<a class="item_wrap" href="<?php the_permalink(); ?>">
+				<img src="<?php echo get_field('img_influencer'); ?>" alt="">
+				<span><?php the_title(); ?></span>
+			</a>
+		<?php endwhile; ?>
+		<?php wp_reset_postdata(); ?>
+	<?php endif; ?>
+	</div>
 </div>
-</div>
+
 <div id="scroll" class="wrapper_form">
    <div class="container">
       <div class="form_title">Join us to become the best</div>

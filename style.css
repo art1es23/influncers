@@ -538,7 +538,7 @@ form {
 .slider_section--wrapper {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   /* padding: 100px 0; */
   margin: 10rem auto;
 }
@@ -694,164 +694,237 @@ form {
 .slick-next {
    right: 0;
 } */
-.section_title {
-  font-size: 40px;
+.related-section {
+  width: 100%;
+  /* width: 93%; */
+  /* padding: 60px 13px; */
+}
+
+.related-section--wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 7.5rem auto;
+  gap: 5rem;
+}
+.related-section__title {
+  font-size: calc(36px + 15 * ((100vw - 320px) / (1920 - 320)));
   font-weight: 600;
   text-align: center;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
   text-transform: uppercase;
 }
 
-.related-section {
-  width: 93%;
-  padding: 60px 13px;
-}
-.related-title {
+
+/* .related-title {
   font-size: calc(36px + 15 * ((100vw - 320px) / (1920 - 320)));
-}
-.related_post_slider {
+} */
+.related-section__slider {
   overflow: hidden;
 }
 
-.related_post_slider .slick-slide {
-  padding: 15px;
+.related-section__slider .slick-slide {
+  margin: 2rem;
 }
-.related-container {
-  position: relative;
-}
-.sl_navi {
-  width: 100%;
+
+.slider-btns {
+  width: 110%;
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 47%;
+  /* top: 47%; */
+  top: 50%;
+  left: 0;
+  transform: translate(-5%, -50%);
 }
-.sl_prev {
+
+.slider-btns__item {
   border: 5px solid rgb(219 210 210 / 50%);
+  width: 6rem;
+  height: 6rem;
+  transform: rotate(45deg);
+  /* margin-left: -50px; */
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.slider-btns__item--prev {
+  /* border: 5px solid rgb(219 210 210 / 50%); */
   border-top: none;
   border-right: none;
-  width: 60px;
-  height: 60px;
-  transform: rotate(45deg);
-  margin-left: -50px;
-  transition: all 0.3s linear;
-    cursor: pointer;
+  /* width: 6rem;
+  height: 6rem;
+  transform: rotate(45deg); */
+  /* margin-left: -50px; */
+  /* transition: all 0.3s linear;
+  cursor: pointer; */
 }
-.sl_next {
-  border: 5px solid rgb(219 210 210 / 50%);
+
+.slider-btns__item--next {
+  /* border: 5px solid rgb(219 210 210 / 50%); */
   border-bottom: none;
   border-left: none;
-  width: 60px;
-  height: 60px;
-  transform: rotate(45deg);
-  margin-right: -50px;
-  transition: all 0.3s linear;
-    cursor: pointer;
+  /* width: 6rem;
+  height: 6rem;
+  transform: rotate(45deg); */
+  /* margin-right: -50px; */
+  /* transition: all 0.3s linear;
+  cursor: pointer; */
 }
-.sl_prev:hover {
+
+.slider-btns__item--prev:hover {
   border: 5px solid rgba(221, 27, 27, 0.5);
   border-top: none;
   border-right: none;
 }
-.sl_next:hover {
+
+.slider-btns__item--next:hover {
   border: 5px solid rgba(221, 27, 27, 0.5);
   border-bottom: none;
   border-left: none;
 }
 
 /* slider_section */
-/* another_equipment */
-.another_equipment {
+/* another-equipment */
+.another-equipment {
+  width: 100%;
+  overflow: hidden;
+  /* padding-top: 100px; */
   background-image: url(images/fon6.jpg);
   background-position: center;
-  width: 100%;
   background-attachment: fixed;
-  color: white;
-  padding-top: 100px;
   background-size: cover !important;
-  overflow: hidden;
   background-position: center center;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
 }
-.another_equipment svg {
+
+.another-equipment--wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10rem auto 0;
+  gap: 5rem;
+}
+
+.another-equipment svg {
   fill: white;
   transition: all linear 0.5s;
 }
-.another_equipment_title {
+.another-equipment__title {
   font-size: 40px;
   font-weight: 600;
   text-align: center;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
+  color: white;
   text-transform: uppercase;
 }
-.another_equipment h4 {
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: all 0.5s linear;
 
-  text-align: center;
-}
-.caterpillar {
+.list-equipment {
   display: flex;
+  height: 55vh;
 }
-.block_press {
-  height: 500px;
-  width: 20%;
+.list-equipment__item {
+  /* height: 500px; */
+  width: calc(100% / 5);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   transition: all 0.5s linear;
   position: relative;
+  cursor: pointer;
 }
-.block_press:hover h4 {
+.list-equipment__item:hover h4 {
   font-size: 30px;
 }
-.block_press:hover {
-  width: 30%;
+.list-equipment__item:hover {
+  width: 35%;
 }
-.block_press .front {
+.list-equipment__item--front {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* padding: 0 5px 25px; */
+  position: relative;
+  gap: 2.5rem;
+}
+
+/* .list-equipment__item--front {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  padding: 0 5px 25px;
-  position: relative;
+  justify-content: flex-start;
+} */
+
+.list-equipment__title {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.5s linear;
+  color: white;
+  text-align: center;
+  font-size: .838vw;
 }
-.another_equipment li {
+
+/* .another-equipment li {
   list-style: none;
   text-align: center;
   margin: 5px 0;
   font-size: 20px;
-}
-.link_to_item a {
+  color: white;
+} */
+.list-equipment__btn {
   display: block;
-  padding: 10px 15px;
+  padding: 1rem 1.5rem;
   background-color: #c12126;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 5px;
   color: white;
-  transition: all linear 0.3s;
+  /* transition: all ease-in 0.3s; */
+  /* height: 50%; */
+  opacity: 0;
+  transition: all ease-in 0.5s;
+  transform: translate(0, 100%);
 }
-.link_to_item a:hover {
+.list-equipment__btn:hover {
   background-color: rgba(193, 33, 38, 0.8);
 }
-.descr_to_item {
-  margin: 10px 0px 15px 0px;
+.list-equipment__info {
+  /* margin: 10px 0px 15px 0px; */
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
   opacity: 0;
-  transition: all linear 0.5s;
-}
-.block_press .link_to_item {
-  opacity: 0;
-  transition: all linear 0.5s;
+  transition: all ease-in 0.5s;
 }
 
-.block_press {
+.list-equipment__info li {
+  list-style: none;
+  text-align: center;
+  /* margin: 5px 0; */
+  font-size: .838vw;
+  color: white;
+}
+/* .list-equipment__item .list-equipment__btn {
+  height: 0;
+  opacity: 0;
+  transition: all ease-in 0.5s;
+  transform: translate(0, 100%);
+} */
+
+/* .list-equipment__item {
   cursor: pointer;
   padding: 70px 0;
-}
-.block_press .back {
+} */
+.list-equipment__item--back {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -862,40 +935,34 @@ form {
   background-size: cover;
   transition: all linear 0.5s;
 }
-.block_press .front {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
 
-.block_press:hover .descr_to_item {
+.list-equipment__item:hover .list-equipment__info  {
   opacity: 1;
 }
-.block_press:hover .link_to_item {
+.list-equipment__item:hover .list-equipment__btn {
   opacity: 1;
+  transform: translate(0, 0);
 }
 
-.block_press:hover svg {
+.list-equipment__item:hover svg {
   fill: #cd2122;
 }
-.block_presss:hover .back {
+.block_presss:hover .list-equipment__item--back {
   background-image: url(https://anatol.com/wp-content/themes/anatol/images/mouse-parallax/001.jpg);
 }
-.block_dryers:hover .back {
+.block_dryers:hover .list-equipment__item--back {
   background-image: url(https://anatol.com/wp-content/themes/anatol/images/mouse-parallax/003.jpg);
 }
-.block_flash:hover .back {
+.block_flash:hover .list-equipment__item--back {
   background-image: url(https://anatol.com/wp-content/themes/anatol/images/mouse-parallax/004.jpg);
 }
-.block_pre-press:hover .back {
+.block_pre-press:hover .list-equipment__item--back {
   background-image: url(https://anatol.com/wp-content/themes/anatol/images/mouse-parallax/005.jpg);
 }
-.block_accessories:hover .back {
+.block_accessories:hover .list-equipment__item--back {
   background-image: url(https://anatol.com/wp-content/themes/anatol/images/mouse-parallax/006.jpg);
 }
-/* another_equipment */
+/* another-equipment */
 /*wrapper_form*/
 .wrapper_form {
   width: 100%;
@@ -1313,26 +1380,38 @@ textarea {
 /*items_wrap*/
 .items_wrap {
   width: 100%;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0 50px;
+  justify-content: center; */
+  /* padding: 0 50px; */
+
+  /* width: calc((100% - 4rem) / 3);
+  transition: all linear 1s;
+  border: 1px solid rgb(0 0 0 / 10%); */
 }
-.items_wrap .container {
+.items_wrap--wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 120px 0 100px 0;
+  gap: 3rem;
+  margin: 10rem auto;
+  /* padding: 120px 0 100px 0; */
 }
 .item_wrap {
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
-  width: 30%;
-  transition: all linear 1s;
-  padding: 30px 0;
+  text-align: center;
+  gap: 2.5rem;
+  padding: 3rem 0;
+  /* margin-bottom: 50px; */
+  transition: all ease-in 0.25s;
   border: 1px solid rgb(0 0 0 / 10%);
+  text-decoration: none;
 }
+
 .item_wrap:hover {
   -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
@@ -1340,22 +1419,30 @@ textarea {
 }
 .item_wrap img {
   width: 75%;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
-.item_wrap a {
+/* .item_wrap {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  text-align: center;
+  gap: 2.5rem;
   text-decoration: none;
+  transition: all 0.25s ease-in;
+} */
+
+.item_wrap span {
   color: rgb(36 36 36);
   text-transform: uppercase;
   font-size: 25px;
   font-weight: 600;
-  transition: all ease 1s;
-  text-align: center;
+  width: 100%;
+  padding: 0 1.5rem;
+  transition: all ease-in 0.25s;
 }
-.item_wrap a:hover {
+
+.item_wrap:hover span{
   color: #cc0101;
 }
 
@@ -1786,7 +1873,7 @@ textarea {
   .sliderr {
     padding: 0;
   }
-  .caterpillar {
+  .list-equipment {
     justify-content: space-around;
   }
   .about-us--wrapper {
@@ -1821,7 +1908,7 @@ textarea {
     align-items: center;
     margin-bottom: 40px;
   }
-  .sl_prev {
+  .slider-btns__item--prev {
     border: 5px solid rgb(219 210 210 / 50%);
     border-top: none;
     border-right: none;
@@ -1831,7 +1918,7 @@ textarea {
     margin-left: -30px;
     transition: all 0.3s linear;
   }
-  .sl_next {
+  .slider-btns__item--next {
     border: 5px solid rgb(219 210 210 / 50%);
     border-bottom: none;
     border-left: none;
@@ -1866,59 +1953,59 @@ textarea {
   .about-us__info {
     width: 100%;
   }
-  .caterpillar {
+  .list-equipment {
     flex-wrap: wrap;
   }
-  .block_press {
+  .list-equipment__item {
     width: 100%;
     height: auto;
   }
-  .block_press:hover {
+  .list-equipment__item:hover {
     width: 100%;
   }
-  .block_press .front {
+  .list-equipment__item--front {
     padding: 50px 15px;
   }
-  .block_press svg {
+  .list-equipment__item svg {
     fill: #cd2122;
     width: calc(100px + 150 * ((100vw - 320px) / (1000 - 320)));
     height: calc(100px + 150 * ((100vw - 320px) / (1000 - 320)));
   }
-  .block_press .descr_to_item {
+  .list-equipment__item .list-equipment__info {
     opacity: 1;
   }
-  .block_press .link_to_item {
+  .list-equipment__item .list-equipment__btn {
     opacity: 1;
   }
-  .block_press h4 {
+  .list-equipment__item h4 {
     font-size: calc(25px + 25 * ((100vw - 320px) / (1000 - 320)));
     margin-bottom: 20px;
   }
-  .block_press:hover h4 {
+  .list-equipment__item:hover h4 {
     font-size: calc(25px + 25 * ((100vw - 320px) / (1000 - 320)));
   }
-  .block_press:hover .back {
+  .list-equipment__item:hover .list-equipment__item--back {
     opacity: 0.5;
   }
-  .block_presss .back {
+  .block_presss .list-equipment__item--back {
     background-image: url(https://anatol.com/wp-content/themes/anatol/images/mouse-parallax/001.jpg);
   }
-  .block_dryers .back {
+  .block_dryers .list-equipment__item--back {
     background-image: url(https://anatol.com/wp-content/themes/anatol/images/mouse-parallax/003.jpg);
   }
-  .block_flash .back {
+  .block_flash .list-equipment__item--back {
     background-image: url(https://anatol.com/wp-content/themes/anatol/images/mouse-parallax/004.jpg);
   }
-  .block_pre-press .back {
+  .block_pre-press .list-equipment__item--back {
     background-image: url(https://anatol.com/wp-content/themes/anatol/images/mouse-parallax/005.jpg);
   }
-  .block_accessories .back {
+  .block_accessories .list-equipment__item--back {
     background-image: url(https://anatol.com/wp-content/themes/anatol/images/mouse-parallax/006.jpg);
   }
-  .another_equipment li {
+  .another-equipment li {
     font-size: calc(20px + 5 * ((100vw - 320px) / (1000 - 320)));
   }
-  .link_to_item a {
+  .list-equipment__btn a {
     font-size: calc(20px + 10 * ((100vw - 320px) / (1000 - 320)));
   }
   .influencer__name {
@@ -1966,23 +2053,23 @@ textarea {
   .slider_text {
     margin-bottom: 50px;
   }
-  .another_equipment {
+  .another-equipment {
     padding-top: 0px;
   }
-  .another_equipment_title {
+  .another-equipment__title {
     padding-top: 50px;
   }
   .burger {
     width: 30px;
     height: 30px;
   }
-  .block_press .back {
+  .list-equipment__item--back {
     display: none;
   }
-  .block_press {
+  .list-equipment__item {
     padding: 0px;
   }
-  .sl_navi {
+  .slider-btns {
     width: 98%;
     display: flex;
     justify-content: space-between;
@@ -1990,7 +2077,7 @@ textarea {
     top: 47%;
     left: 1%;
   }
-  .sl_prev {
+  .slider-btns__item--prev {
     border: 5px solid rgb(219 210 210 / 50%);
     border-top: none;
     border-right: none;
@@ -2000,7 +2087,7 @@ textarea {
     margin-left: -20px;
     transition: all 0.3s linear;
   }
-  .sl_next {
+  .slider-btns__item--next {
     border: 5px solid rgb(219 210 210 / 50%);
     border-bottom: none;
     border-left: none;
@@ -2026,7 +2113,7 @@ textarea {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .items_wrap .container {
+  .items_wrap--wrapper {
     padding: 60px 0 20px 0;
   }
   .item_wrap {
@@ -2094,7 +2181,7 @@ textarea {
   .contact-form--wrapper,
   .slider_section--wrapper,
   .wrapper_form .container,
-  .items_wrap .container,
+  .items_wrap--wrapper,
   .about-us--wrapper,
   .regional_offices .container,
   .video_section_wraper .container {
@@ -2177,7 +2264,7 @@ textarea {
   .form_wrap {
     width: 90%;
   }
-  .block_press h4 {
+  .list-equipment__item h4 {
     margin-bottom: 0px;
   }
   .wrapper_header_btn {
@@ -2256,16 +2343,16 @@ textarea {
   .contact-form form {
     padding: 0 15px;
   }
-  .block_press h4 {
+  .list-equipment__item h4 {
     font-size: calc(19px + 25 * ((100vw - 320px) / (1000 - 320)));
   }
-  .block_press .front {
+  .list-equipment__item--front {
     padding: 15px 15px 40px;
   }
-  .another_equipment li {
+  .another-equipment li {
     font-size: calc(17px + 5 * ((100vw - 320px) / (1000 - 320)));
   }
-  .link_to_item a {
+  .list-equipment__btn a {
     font-size: calc(13px + 10 * ((100vw - 320px) / (1000 - 320)));
   }
 }
