@@ -47,9 +47,9 @@ get_header(); ?>
 		<div class="about-us__info">
 			<div class="about-us__title"><?php echo get_field('title_about_us'); ?></div>
 			<div class="about-us__description"><?php echo get_field('description_about_us'); ?></div>
-			<div class="about-us__btn">
-				<a href="/influencers"  target="_blank">Get to know them!</a>
-			</div>
+			<!-- <div class="about-us__btn"> -->
+			<a class="about-us__btn" href="/influencers" target="_blank">Get to know them!</a>
+			<!-- </div> -->
 		</div>
 
 		<div class="about-us_img">

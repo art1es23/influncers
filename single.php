@@ -14,10 +14,10 @@ class="top_banner">
 
 <div class="banner">
    <div class="banner--wrapper container">
-      <!-- <div class="post-navigation">
-         <?php previous_post_link('<div class="prev-post">%link</div>', __('<span class="prew-arrow"></span><span class="prev-title">%title</span>') ); ?>
-         <?php next_post_link('<div class="next-post">%link</div>', __('<span class="next-arrow"></span> <span class="next-title">%title</span>') ); ?>
-      </div> -->
+      <div class="post-navigation">
+         <?php previous_post_link('<div class="prev-post">%link</div>', __('<span class="post-navigation__item prew-arrow"></span><span class="post-navigation__title prev-title">%title</span>') ); ?>
+         <?php next_post_link('<div class="next-post">%link</div>', __('<span class="post-navigation__item next-arrow"></span> <span class="post-navigation__title next-title">%title</span>') ); ?>
+      </div>
 
       <div class="influencer">
          <div class="influncer__item influencer-img">
@@ -56,11 +56,11 @@ class="top_banner">
             <?php }?>
 
             <?php if(get_field('influencer_tel') || get_field('influencer_email')  ){  ?>
-               <!-- <div class="influencer__contacts"> -->
-                  <a class="influencer__contacts" href="tel:<?php echo get_field('influencer_tel'); ?>"><?php echo get_field('influencer_tel'); ?></a> 
+               <div class="influencer__contacts">
+                  <a class="" href="tel:<?php echo get_field('influencer_tel'); ?>"><?php echo get_field('influencer_tel'); ?></a> 
                   <!-- <br>  -->
-                  <a class="influencer__contacts" href="mailto:<?php echo get_field('influencer_email'); ?>"><?php echo get_field('influencer_email'); ?></a> 
-               <!-- </div> -->
+                  <a class="" href="mailto:<?php echo get_field('influencer_email'); ?>"><?php echo get_field('influencer_email'); ?></a> 
+               </div>
             <?php }?>
 
             <?php if(get_field('location')){ ?>
@@ -129,22 +129,24 @@ class="top_banner">
 </div>
 
 
-<div class="slider_section">
-   <div class="slider_section--wrapper container">
-      <div class="slider_text">
+<div class="slider-section">
+   <div class="slider-section--wrapper container">
+      
+      <div class="slider-section__item slider-info">
       <?php if(get_field('big_description_title')){  ?>
-            <div class="slider_title">
+            <div class="slider-info__title">
                <?php echo get_field('big_description_title'); ?>
             </div>
          <?php }?>
          <?php if(get_field('big_description')){  ?>
-         <div class="slider_description">
+         <div class="slider-info__description">
             <?php echo get_field('big_description'); ?>
          </div>
          <?php }?>
       </div>
-      <div class="slider_slider">
-         <div class="sliderr">
+
+      <div class="slider-section__item slider-info-media">
+         <div class="slider-media">
          <?php if(get_field('video_1_img') && get_field('video_1_url')){  ?>
             <div class="slick_item">
                <img src="<?php echo get_field('video_1_img'); ?>" alt="<?php echo get_field('video_1_url'); ?>">
