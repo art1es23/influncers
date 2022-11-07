@@ -5,7 +5,7 @@ Template Name: Archives
 get_header(); ?>
 
 <div class="items_wrap">
-	<div class="container">
+	<div class="items_wrap--wrapper container">
 	<?php
 	$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
 	
@@ -415,7 +415,7 @@ get_header(); ?>
 			</div>
 
 			<div class="form-row text-center">
-				<input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="button">
+				<input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="btn">
 			</div>
 		</form>
    </div>

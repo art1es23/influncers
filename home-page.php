@@ -12,19 +12,19 @@
  */
 /* Template Name: Front page */
 get_header(); ?>
-<div class="acordeon">
+<div class="accordeon">
 <?php
 	$featured_posts = get_field('choice_posts');
 	if( $featured_posts ): ?>
 	<ul class="accordeon-slide-list">
-    <?php foreach( $featured_posts as $post ): 
+    <?php foreach( $featured_posts as $post ):
         setup_postdata($post); ?>
 
 			<li class="accordeon-slide-list__item accordeon-slide" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(), array(300, 210)); ?>);">
 				<a class="accordeon-slide__link" href="<?=get_permalink();?>" class=""> 
 					<span class="accordeon-slide__title"><?php echo get_the_title(); ?></span>
 					<!-- <span class="line"></span> -->
-					<button class="accordeon-slide__btn acordeon_button">Learn more</button>
+					<button class="btn accordeon-slide__btn accordeon_button">Learn more</button>
 				</a>
     		</li>
     <?php endforeach; ?>
@@ -33,7 +33,7 @@ get_header(); ?>
 			<a class="accordeon-slide__link" href="<?php bloginfo('url'); ?>/archiv">
 				<span class="accordeon-slide__title">More Success Stories</span> 
 				<!-- <span class="line"></span> -->
-				<button class="accordeon-slide__btn acordeon_button">View more</button></a>
+				<button class="btn accordeon-slide__btn accordeon_button">View more</button></a>
 			</a>
 		</li>
 	</ul>
@@ -48,7 +48,7 @@ get_header(); ?>
 			<div class="about-us__title"><?php echo get_field('title_about_us'); ?></div>
 			<div class="about-us__description"><?php echo get_field('description_about_us'); ?></div>
 			<!-- <div class="about-us__btn"> -->
-			<a class="about-us__btn" href="/influencers" target="_blank">Get to know them!</a>
+			<a class="btn about-us__btn" href="/influencers" target="_blank">Get to know them!</a>
 			<!-- </div> -->
 		</div>
 
@@ -451,7 +451,7 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="form-row text-center">
-				<input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="button">
+				<input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="btn">
 			</div>
 		</form>
    </div>

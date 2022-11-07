@@ -5,9 +5,9 @@
 <?php if(get_field('banner_img')){  ?>
 style="list-equipment__item--background-image: linear-gradient( to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100% ), url(<?php echo get_field('banner_img'); ?>);"
 <?php }?>
-class="top_banner">
-   <div class="container">
-      <h1><?php the_title() ?></h1>
+class="hero">
+   <div class="hero--wrapper container">
+      <h1 class="hero__title"><?php the_title() ?></h1>
       <?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
    </div> 
 </div>
@@ -20,7 +20,7 @@ class="top_banner">
       </div>
 
       <div class="influencer">
-         <div class="influncer__item influencer-img">
+         <div class="influencer__item influencer-img">
                <div class="slider_images">
                   <?php if(get_field('img-1')){  ?>
                      <div class="img_item">
@@ -49,7 +49,7 @@ class="top_banner">
                   <?php }?>
                </div>
             </div>
-         <div class="influncer__item influencer-info">
+         <div class="influencer__item influencer-info">
             <h2 class="influencer__name"><?php the_title() ?></h2>
             <?php if(get_field('small_description_')){ ?>
                <p class="influencer__description"><?php echo get_field('small_description_'); ?></p>
@@ -72,7 +72,7 @@ class="top_banner">
             <?php }?>
 
             <?php if(get_field('influencer_url')){  ?>
-               <a href="<?php echo get_field('influencer_url'); ?>" class="influencer-btn learn-more-btn button" target="_blank">LEARN MORE</a>      
+               <a href="<?php echo get_field('influencer_url'); ?>" class="btn influencer-btn learn-more-btn" target="_blank">LEARN MORE</a>      
             <?php }?>
          </div>
       </div>
@@ -120,7 +120,7 @@ class="top_banner">
             </div>
 
             <div class="form-row text-center">
-               <input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="button">
+               <input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="btn">
             </div>
          </form>
 
@@ -253,9 +253,9 @@ class="top_banner">
                   <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 552 552"
                      width="150" height="150">
                      <g id="Layer">
-                        <path id="Layer" class="shp0"
+                        <!-- <path id="Layer" class="shp0"
                            d="M45.4 -2270.4L502.8 -2270.4C527.68 -2270.4 547.8 -2250.28 547.8 -2225.4L547.8 -1768.05C547.8 -1743.16 527.68 -1723.05 502.8 -1723.05L45.4 -1723.05C20.51 -1723.05 0.4 -1743.16 0.4 -1768.05L0.4 -2225.4C0.4 -2250.28 20.51 -2270.4 45.4 -2270.4Z">
-                        </path>
+                        </path> -->
                         <g id="Layer">
                            <g id="Layer">
                               <path id="Layer" class="shp1"
@@ -640,7 +640,7 @@ class="top_banner">
                            </g>
                         </g>
                      </g>
-                     <g id="Layer">
+                     <!-- <g id="Layer">
                         <path id="Layer" class="shp0"
                            d="M45.3 570.4L502.7 570.4C527.59 570.4 547.7 590.51 547.7 615.4L547.7 1072.75C547.7 1097.64 527.59 1117.75 502.7 1117.75L45.3 1117.75C20.41 1117.75 0.3 1097.64 0.3 1072.75L0.3 615.4C0.3 590.51 20.41 570.4 45.3 570.4Z">
                         </path>
@@ -654,7 +654,7 @@ class="top_banner">
                            <path id="Layer" class="shp2"
                               d="M38 946.5L42.2 977.9L382.3 995.6L375.5 961.9L38 946.5L38 946.5Z"></path>
                         </g>
-                     </g>
+                     </g> -->
                   </svg>
                </a>
                <!-- </div> -->
@@ -668,7 +668,7 @@ class="top_banner">
                <!-- </div> -->
                <!-- <div class="list-equipment__btn"> -->
                   <a target="_blank" href="https://anatol.com//screen-printing-presses"
-                     class="list-equipment__btn btn button_go button red-button draw-red">Learn More</a>
+                     class="btn list-equipment__btn button_go button red-button draw-red">Learn More</a>
                <!-- </div> -->
             </div>
          </div>
@@ -682,9 +682,9 @@ class="top_banner">
                      width="150" height="150">
 
                      <g id="Layer">
-                        <path id="Layer" class="shp0"
+                        <!-- <path id="Layer" class="shp0"
                            d="M45.4 -2270.4L502.8 -2270.4C527.68 -2270.4 547.8 -2250.28 547.8 -2225.4L547.8 -1768.05C547.8 -1743.16 527.68 -1723.05 502.8 -1723.05L45.4 -1723.05C20.51 -1723.05 0.4 -1743.16 0.4 -1768.05L0.4 -2225.4C0.4 -2250.28 20.51 -2270.4 45.4 -2270.4Z">
-                        </path>
+                        </path> -->
                         <g id="Layer">
                            <g id="Layer">
                               <path id="Layer" class="shp1"
@@ -926,7 +926,7 @@ class="top_banner">
                            </g>
                         </g>
                      </g>
-                     <g id="Layer">
+                     <!-- <g id="Layer">
                         <path id="Layer" class="shp0"
                            d="M45.3 -1702.6L502.7 -1702.6C527.59 -1702.6 547.7 -1682.49 547.7 -1657.6L547.7 -1200.25C547.7 -1175.37 527.59 -1155.25 502.7 -1155.25L45.3 -1155.25C20.41 -1155.25 0.3 -1175.37 0.3 -1200.25L0.3 -1657.6C0.3 -1682.49 20.41 -1702.6 45.3 -1702.6Z">
                         </path>
@@ -1121,7 +1121,7 @@ class="top_banner">
                               d="M177.3 -796.4C180.7 -799.7 184.6 -804.5 183.7 -809.6C182.8 -814.7 178.6 -816 177 -820.8C175.4 -825.6 176.2 -829.7 182.8 -837.8">
                            </path>
                         </g>
-                     </g>
+                     </g> -->
                      <g id="Layer">
                         <g id="Layer">
                            <path id="Layer" class="shp2"
@@ -1161,7 +1161,7 @@ class="top_banner">
                            </g>
                         </g>
                      </g>
-                     <g id="Layer">
+                     <!-- <g id="Layer">
                         <path id="Layer" class="shp0"
                            d="M45.3 570.4L502.7 570.4C527.59 570.4 547.7 590.51 547.7 615.4L547.7 1072.75C547.7 1097.64 527.59 1117.75 502.7 1117.75L45.3 1117.75C20.41 1117.75 0.3 1097.64 0.3 1072.75L0.3 615.4C0.3 590.51 20.41 570.4 45.3 570.4Z">
                         </path>
@@ -1175,7 +1175,7 @@ class="top_banner">
                            <path id="Layer" class="shp2"
                               d="M38 946.5L42.2 977.9L382.3 995.6L375.5 961.9L38 946.5L38 946.5Z"></path>
                         </g>
-                     </g>
+                     </g> -->
                   </svg>
                </a>
                <!-- </div> -->
@@ -1189,7 +1189,7 @@ class="top_banner">
                <!-- </div> -->
                <!-- <div class="list-equipment__btn"> -->
                   <a target="_blank" href="https://anatol.com//products-category/screen-printing-conveyor-dryers/"
-                     class="list-equipment__btn btn button_go button red-button draw-red">Learn More</a>
+                     class="btn list-equipment__btn button_go button red-button draw-red">Learn More</a>
                <!-- </div> -->
             </div>
          </div>
@@ -1203,9 +1203,9 @@ class="top_banner">
                   <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 552 552"
                      width="150" height="150">
                      <g id="Layer">
-                        <path id="Layer" class="shp0"
+                        <!-- <path id="Layer" class="shp0"
                            d="M45.4 -2270.4L502.8 -2270.4C527.68 -2270.4 547.8 -2250.28 547.8 -2225.4L547.8 -1768.05C547.8 -1743.16 527.68 -1723.05 502.8 -1723.05L45.4 -1723.05C20.51 -1723.05 0.4 -1743.16 0.4 -1768.05L0.4 -2225.4C0.4 -2250.28 20.51 -2270.4 45.4 -2270.4Z">
-                        </path>
+                        </path> -->
                         <g id="Layer">
                            <g id="Layer">
                               <path id="Layer" class="shp1"
@@ -1447,7 +1447,7 @@ class="top_banner">
                            </g>
                         </g>
                      </g>
-                     <g id="Layer">
+                     <!-- <g id="Layer">
                         <path id="Layer" class="shp0"
                            d="M45.3 -1702.6L502.7 -1702.6C527.59 -1702.6 547.7 -1682.49 547.7 -1657.6L547.7 -1200.25C547.7 -1175.37 527.59 -1155.25 502.7 -1155.25L45.3 -1155.25C20.41 -1155.25 0.3 -1175.37 0.3 -1200.25L0.3 -1657.6C0.3 -1682.49 20.41 -1702.6 45.3 -1702.6Z">
                         </path>
@@ -1609,7 +1609,7 @@ class="top_banner">
                               </g>
                            </g>
                         </g>
-                     </g>
+                     </g> -->
                      <g id="Layer">
                         <g id="Layer">
                            <g id="Layer">
@@ -1640,7 +1640,7 @@ class="top_banner">
                            </path>
                         </g>
                      </g>
-                     <g id="Layer">
+                     <!-- <g id="Layer">
                         <path id="Layer" class="shp0"
                            d="M45.3 570.4L502.7 570.4C527.59 570.4 547.7 590.51 547.7 615.4L547.7 1072.75C547.7 1097.64 527.59 1117.75 502.7 1117.75L45.3 1117.75C20.41 1117.75 0.3 1097.64 0.3 1072.75L0.3 615.4C0.3 590.51 20.41 570.4 45.3 570.4Z">
                         </path>
@@ -1654,7 +1654,7 @@ class="top_banner">
                            <path id="Layer" class="shp2"
                               d="M38 946.5L42.2 977.9L382.3 995.6L375.5 961.9L38 946.5L38 946.5Z"></path>
                         </g>
-                     </g>
+                     </g> -->
                   </svg>
                </a>
                <!-- </div> -->
@@ -1668,7 +1668,7 @@ class="top_banner">
                <!-- </div> -->
                <!-- <div class="list-equipment__btn"> -->
                   <a target="_blank" href="https://anatol.com//products-category/flash-cure-units/"
-                     class="list-equipment__btn btn button_go button red-button draw-red">Learn More</a>
+                     class="btn list-equipment__btn button_go button red-button draw-red">Learn More</a>
                <!-- </div> -->
             </div>
          </div>
@@ -1682,9 +1682,9 @@ class="top_banner">
                   <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 552 552"
                      width="150" height="150">
                      <g id="Layer">
-                        <path id="Layer" class="shp0"
+                        <!-- <path id="Layer" class="shp0"
                            d="M45.4 -2270.4L502.8 -2270.4C527.68 -2270.4 547.8 -2250.28 547.8 -2225.4L547.8 -1768.05C547.8 -1743.16 527.68 -1723.05 502.8 -1723.05L45.4 -1723.05C20.51 -1723.05 0.4 -1743.16 0.4 -1768.05L0.4 -2225.4C0.4 -2250.28 20.51 -2270.4 45.4 -2270.4Z">
-                        </path>
+                        </path> -->
                         <g id="Layer">
                            <g id="Layer">
                               <path id="Layer" class="shp1"
@@ -1927,9 +1927,9 @@ class="top_banner">
                         </g>
                      </g>
                      <g id="Layer">
-                        <path id="Layer" class="shp0"
+                        <!-- <path id="Layer" class="shp0"
                            d="M45.3 -1702.6L502.7 -1702.6C527.59 -1702.6 547.7 -1682.49 547.7 -1657.6L547.7 -1200.25C547.7 -1175.37 527.59 -1155.25 502.7 -1155.25L45.3 -1155.25C20.41 -1155.25 0.3 -1175.37 0.3 -1200.25L0.3 -1657.6C0.3 -1682.49 20.41 -1702.6 45.3 -1702.6Z">
-                        </path>
+                        </path> -->
                         <g id="Layer">
                            <path id="Layer" class="shp1"
                               d="M274 -1360C235.9 -1360 205.1 -1390.8 205.1 -1428.9C205.1 -1467 235.9 -1497.8 274 -1497.8C312.1 -1497.8 342.9 -1467 342.9 -1428.9C342.9 -1390.8 312.1 -1360 274 -1360Z">
@@ -2089,7 +2089,7 @@ class="top_banner">
                            </g>
                         </g>
                      </g>
-                     <g id="Layer">
+                     <!-- <g id="Layer">
                         <path id="Layer" class="shp0"
                            d="M45.3 -1136.8L502.7 -1136.8C527.59 -1136.8 547.7 -1116.68 547.7 -1091.8L547.7 -634.45C547.7 -609.56 527.59 -589.45 502.7 -589.45L45.3 -589.45C20.41 -589.45 0.3 -609.56 0.3 -634.45L0.3 -1091.8C0.3 -1116.68 20.41 -1136.8 45.3 -1136.8Z">
                         </path>
@@ -2121,8 +2121,8 @@ class="top_banner">
                               d="M177.3 -796.4C180.7 -799.7 184.6 -804.5 183.7 -809.6C182.8 -814.7 178.6 -816 177 -820.8C175.4 -825.6 176.2 -829.7 182.8 -837.8">
                            </path>
                         </g>
-                     </g>
-                     <g id="Layer">
+                     </g> -->
+                     <!-- <g id="Layer">
                         <path id="Layer" class="shp0"
                            d="M45.3 -569.7L502.7 -569.7C527.59 -569.7 547.7 -549.59 547.7 -524.7L547.7 -67.35C547.7 -42.46 527.59 -22.35 502.7 -22.35L45.3 -22.35C20.41 -22.35 0.3 -42.46 0.3 -67.35L0.3 -524.7C0.3 -549.59 20.41 -569.7 45.3 -569.7Z">
                         </path>
@@ -2163,7 +2163,7 @@ class="top_banner">
                               </path>
                            </g>
                         </g>
-                     </g>
+                     </g> -->
                      <g id="Layer">
                         <g id="Layer">
                            <path id="Layer" fill-rule="evenodd" class="shp2"
@@ -2174,7 +2174,7 @@ class="top_banner">
                            </path>
                         </g>
                      </g>
-                     <g id="Layer">
+                     <!-- <g id="Layer">
                         <path id="Layer" class="shp0"
                            d="M45.3 570.4L502.7 570.4C527.59 570.4 547.7 590.51 547.7 615.4L547.7 1072.75C547.7 1097.64 527.59 1117.75 502.7 1117.75L45.3 1117.75C20.41 1117.75 0.3 1097.64 0.3 1072.75L0.3 615.4C0.3 590.51 20.41 570.4 45.3 570.4Z">
                         </path>
@@ -2188,7 +2188,7 @@ class="top_banner">
                            <path id="Layer" class="shp2"
                               d="M38 946.5L42.2 977.9L382.3 995.6L375.5 961.9L38 946.5L38 946.5Z"></path>
                         </g>
-                     </g>
+                     </g> -->
                   </svg>
                </a>
                <!-- </div> -->
@@ -2202,7 +2202,7 @@ class="top_banner">
                <!-- </div> -->
                <!-- <div class="list-equipment__btn"> -->
                   <a target="_blank" href="https://anatol.com//products-category/pre-press-equipment/"
-                     class="list-equipment__btn btn button_go button red-button draw-red">Learn More</a>
+                     class="btn list-equipment__btn button_go button red-button draw-red">Learn More</a>
                <!-- </div> -->
             </div>
          </div>
@@ -2216,9 +2216,9 @@ class="top_banner">
                   <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 552 552"
                      width="150" height="150">
                      <g id="Layer">
-                        <path id="Layer" class="shp0"
+                        <!-- <path id="Layer" class="shp0"
                            d="M45.4 -2843.4L502.8 -2843.4C527.68 -2843.4 547.8 -2823.28 547.8 -2798.4L547.8 -2341.05C547.8 -2316.16 527.68 -2296.05 502.8 -2296.05L45.4 -2296.05C20.51 -2296.05 0.4 -2316.16 0.4 -2341.05L0.4 -2798.4C0.4 -2823.28 20.51 -2843.4 45.4 -2843.4Z">
-                        </path>
+                        </path> -->
                         <g id="Layer">
                            <g id="Layer">
                               <path id="Layer" class="shp1"
@@ -2461,9 +2461,9 @@ class="top_banner">
                         </g>
                      </g>
                      <g id="Layer">
-                        <path id="Layer" class="shp0"
+                        <!-- <path id="Layer" class="shp0"
                            d="M45.3 -2275.6L502.7 -2275.6C527.59 -2275.6 547.7 -2255.49 547.7 -2230.6L547.7 -1773.25C547.7 -1748.37 527.59 -1728.25 502.7 -1728.25L45.3 -1728.25C20.41 -1728.25 0.3 -1748.37 0.3 -1773.25L0.3 -2230.6C0.3 -2255.49 20.41 -2275.6 45.3 -2275.6Z">
-                        </path>
+                        </path> -->
                         <g id="Layer">
                            <path id="Layer" class="shp1"
                               d="M274 -1933C235.9 -1933 205.1 -1963.8 205.1 -2001.9C205.1 -2040 235.9 -2070.8 274 -2070.8C312.1 -2070.8 342.9 -2040 342.9 -2001.9C342.9 -1963.8 312.1 -1933 274 -1933Z">
@@ -2623,7 +2623,7 @@ class="top_banner">
                            </g>
                         </g>
                      </g>
-                     <g id="Layer">
+                     <!-- <g id="Layer">
                         <path id="Layer" class="shp0"
                            d="M45.3 -1709.8L502.7 -1709.8C527.59 -1709.8 547.7 -1689.68 547.7 -1664.8L547.7 -1207.45C547.7 -1182.56 527.59 -1162.45 502.7 -1162.45L45.3 -1162.45C20.41 -1162.45 0.3 -1182.56 0.3 -1207.45L0.3 -1664.8C0.3 -1689.68 20.41 -1709.8 45.3 -1709.8Z">
                         </path>
@@ -2655,8 +2655,8 @@ class="top_banner">
                               d="M177.3 -1369.4C180.7 -1372.7 184.6 -1377.5 183.7 -1382.6C182.8 -1387.7 178.6 -1389 177 -1393.8C175.4 -1398.6 176.2 -1402.7 182.8 -1410.8">
                            </path>
                         </g>
-                     </g>
-                     <g id="Layer">
+                     </g> -->
+                     <!-- <g id="Layer">
                         <path id="Layer" class="shp0"
                            d="M45.3 -1142.7L502.7 -1142.7C527.59 -1142.7 547.7 -1122.59 547.7 -1097.7L547.7 -640.35C547.7 -615.46 527.59 -595.35 502.7 -595.35L45.3 -595.35C20.41 -595.35 0.3 -615.46 0.3 -640.35L0.3 -1097.7C0.3 -1122.59 20.41 -1142.7 45.3 -1142.7Z">
                         </path>
@@ -2697,8 +2697,8 @@ class="top_banner">
                               </path>
                            </g>
                         </g>
-                     </g>
-                     <g id="Layer">
+                     </g> -->
+                     <!-- <g id="Layer">
                         <path id="Layer" class="shp0"
                            d="M45.3 -571.1L502.7 -571.1C527.59 -571.1 547.7 -550.99 547.7 -526.1L547.7 -68.75C547.7 -43.86 527.59 -23.75 502.7 -23.75L45.3 -23.75C20.41 -23.75 0.3 -43.86 0.3 -68.75L0.3 -526.1C0.3 -550.99 20.41 -571.1 45.3 -571.1Z">
                         </path>
@@ -2710,7 +2710,7 @@ class="top_banner">
                               d="M486.3 -457.4C487.72 -457.4 489.12 -457.12 490.43 -456.58C491.74 -456.04 492.93 -455.24 493.94 -454.24C494.94 -453.23 495.74 -452.04 496.28 -450.73C496.82 -449.42 497.1 -448.02 497.1 -446.6L497.1 -148.2C497.1 -146.78 496.82 -145.38 496.28 -144.07C495.74 -142.76 494.94 -141.57 493.94 -140.56C492.93 -139.56 491.74 -138.76 490.43 -138.22C489.12 -137.68 487.72 -137.4 486.3 -137.4L251.5 -137.4C250.09 -137.4 248.69 -137.68 247.38 -138.22C246.08 -138.77 244.89 -139.57 243.9 -140.57C242.9 -141.57 242.12 -142.76 241.59 -144.07C241.05 -145.38 240.79 -146.79 240.8 -148.2L240.8 -446.6C240.79 -448.01 241.05 -449.42 241.59 -450.73C242.12 -452.04 242.9 -453.23 243.9 -454.23C244.89 -455.23 246.08 -456.03 247.38 -456.58C248.69 -457.12 250.09 -457.4 251.5 -457.4L486.3 -457.4ZM475.5 -435.2L451.1 -435.2L451.1 -421.9L264 -421.9L264 -156.8L475.5 -156.8L475.5 -435.2Z">
                            </path>
                         </g>
-                     </g>
+                     </g> -->
                      <g id="Layer">
                         <g id="Layer">
                            <path id="Layer" fill-rule="evenodd" class="shp2"
@@ -2736,7 +2736,7 @@ class="top_banner">
                <!-- </div> -->
                <!-- <div class="list-equipment__btn"> -->
                   <a target="_blank"  href="https://anatol.com//products-category/screen-printing-accessories/"
-                     class="list-equipment__btn btn button_go button red-button draw-red">Learn More</a>
+                     class="btn list-equipment__btn button_go button red-button draw-red">Learn More</a>
                <!-- </div> -->
             </div>
          </div>
@@ -3140,7 +3140,7 @@ class="top_banner">
 							</div>
 						</div>
 						<div class="form-row text-center">
-							<input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="button">
+							<input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="btn">
 						</div>
 					</form>
    </div>

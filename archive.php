@@ -414,7 +414,7 @@ get_header(); ?>
 							</div>
 						</div>
 						<div class="form-row text-center">
-							<input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="button">
+							<input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="btn">
 						</div>
 					</form>
    </div>

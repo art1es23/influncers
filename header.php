@@ -9,7 +9,7 @@
 ?>
 <!DOCTYPE html>
 
-<html lang="en" class=" desktop landscape">
+<html lang="en" class="desktop landscape">
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -46,7 +46,7 @@
                   <span></span>
                </div>
                <div class="header__item wrapper_header_btn">
-                  <a href="#scroll" class="get_a_quote">Get a quote</a>
+                  <a href="#scroll" class="btn get_a_quote">Get a quote</a>
                      <!-- <div class="get_a_quote ">
                      </div></a> -->
                </div>

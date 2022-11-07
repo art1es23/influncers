@@ -19,9 +19,9 @@
 
 		<div class="footer__item widget-2">
 			<!-- <div class="contacts_part logo_social"> -->
-				<div class="footer-logo logo">
-					<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/anatol-logo-red.svg" alt=""></a>
-				</div>
+				<!-- <div class="footer-logo logo"> -->
+					<a class="footer-logo logo" href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/anatol-logo-red.svg" alt=""></a>
+				<!-- </div> -->
 				
 				<!-- <div class="social"> -->
 					<ul class="social-links">
@@ -55,14 +55,14 @@
 			<!-- </div> -->
 		</div>
 
-		<div id="text-4" class="footer__item widget-3 widget_text">
+		<div id="text-4" class="footer__item footer-btns widget-3 widget_text">
 			<!-- <div class="contacts_part"> -->
 				<!-- <div class="footer_learn_more"> -->
 					<!-- <button class="learn-more-btn"> -->
-						<a href="https://anatol.com" class="learn-more-btn button" target="_blank">LEARN MORE</a>
+						<a href="https://anatol.com" class="btn footer-btns__item" target="_blank">LEARN MORE</a>
 					<!-- </button> -->
 					<!-- <button class="learn-more-btn"> -->
-						<a href="https://anatol.com/where-to-buy/" class="learn-more-btn button" target="_blank">WHERE TO BUY</a>
+						<a href="https://anatol.com/where-to-buy/" class="btn footer-btns__item" target="_blank">WHERE TO BUY</a>
 					<!-- </button> -->
 				<!-- </div> -->
 			<!-- </div> -->
