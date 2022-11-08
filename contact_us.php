@@ -4,10 +4,8 @@ Template Name: Contact us
 */
 get_header(); ?>
 <div
-<?php if(get_field('banner_img')){  ?>
-style="background-image: linear-gradient( to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100% ), url(<?php echo get_field('banner_img'); ?>);"
-<?php }?>
-class="hero">
+<?php if(get_field('banner_img')){ ?> style="background-image: linear-gradient( to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100% ), url(<?php echo get_field('banner_img'); ?>);"
+<?php }?> class="hero">
    <div class="hero--wrapper container">
       <h1 class="hero__title"><?php the_title() ?></h1>
       <?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
@@ -114,25 +112,6 @@ class="hero">
 	</video>
 	<!-- <div class="video_section--wraper"> -->
 		<div class="video_section--wrapper container">
-			<!-- <div class="video_section_contact">
-   				<div class="contact_line ">
-         			<h4 class="contact_line_header">World Headquarters</h4>
-   				</div>
-   				<div class="contact_line ">
-         			<h4 class="contact_line_header"><span>Location</span></h4>
-         			<div class="et_pb_blurb_description">919 Sherwood Drive<br>
-            			Lake Bluff, IL 60044, USA</div>
-   					</div>
-				<div class="contact_line">
-					<h4 class="contact_line_header"><span>Phone</span></h4>
-					<div class="et_pb_blurb_description">847-367-9760</div>
-				</div>
-				<div class="contact_line">
-					<h4 class="contact_line_header"><span>Email</span></h4>
-					<div class="et_pb_blurb_description">info@anatol.com</div>
-				</div>
-			</div> -->
-
 			<div class="contact_text">
 				<div class="contact_text_wrap">
 					<div class="contact_text_title">World Headquarters</div>
@@ -544,7 +523,7 @@ class="hero">
 					</div>
 
 					<div class="form-row text-center">
-						<input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="contact-us-btn btn">
+						<input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="submit-btn btn">
 					</div>
 				</form>
 			</div>

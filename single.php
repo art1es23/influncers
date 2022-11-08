@@ -120,7 +120,7 @@ class="hero">
             </div>
 
             <div class="form-row text-center">
-               <input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="btn">
+               <input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="submit-btn btn">
             </div>
          </form>
 
@@ -3140,7 +3140,7 @@ class="hero">
 							</div>
 						</div>
 						<div class="form-row text-center">
-							<input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="btn">
+							<input id="my_form_send" type="submit" name="submit_web_form" value="Get a Quote" class="submit-btn btn">
 						</div>
 					</form>
    </div>
